@@ -1,6 +1,6 @@
 # BWC OnboardingBot
 
-OnboardingBot is the Black Widow Company Discord onboarding bot. It is a Discord-only stop-gap onboarding system intended to handle new-user gating, game-role assignment, Star Citizen RSI profile collection, private command-team notification, and MIMIC screening until a later OAuth2/forum/OpServ onboarding system replaces it.
+OnboardingBot is the Black Widow Company Discord onboarding bot. It is a Discord-only stop-gap onboarding system intended to handle new-user gating, game-role assignment, private staff and command-team notification, and for Star Citizen, Star Citizen RSI profile collection and MIMIC screening.  This bot is effective only until a later OAuth2/forum/OpServ onboarding system replaces it.
 
 The current bot does **not** create forum accounts, does **not** use OAuth2, and does **not** submit formal recruitment applications. It helps route new Discord users into the correct access roles and notifies the appropriate game command staff for follow-up.
 
@@ -17,25 +17,26 @@ OnboardingBot currently supports:
 - Optional additional/secondary game selection
 - Guest + game-role assignment
 - Onboarding audit logging
-- Primary-game command-team notification
-- Star Citizen RSI Citizen profile URL collection
-- RSI Citizen URL locale normalization
-- MIMIC lookup for Star Citizen applicants
-- Private Star Citizen C&S alerting for RSI/MIMIC results
+- Primary-game command-team notification in the Onboarding Logs channel
 - Staff outreach tracking with an **I have reached out** button
 
-Supported games are currently:
+For Star Citizen specifically:
+- Star Citizen RSI Citizen profile URL collection
+- RSI Citizen URL locale normalization (en,fr,de,etc)
+- MIMIC lookup for Star Citizen applicants
+- Private Star Citizen C&S alerting for RSI/MIMIC results
 
+Supported games are currently:
 - Dune
 - MechWarrior Online
 - Star Citizen
-- Vanguard
+- Vanguard Company games
 
 ---
 
 ## User Onboarding Flow
 
-A new Discord user clicks the **Start Onboarding** button and proceeds through the following flow:
+A new Discord user clicks the **Start Onboarding** button in the #welcome channel and proceeds through the following flow:
 
 1. Confirm they have read the server rules.
 2. Confirm they understand the SOP reference.
