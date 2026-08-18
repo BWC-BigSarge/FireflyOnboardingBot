@@ -1,11 +1,12 @@
-# Use a lightweight Python base image
-FROM python:3.13-slim
+# Use the same Python major/minor version tested successfully on SparkedHost
+FROM python:3.12-slim
+
+# Keep Python logs visible in Docker output and avoid writing .pyc files
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
 
 # Set working directory
 WORKDIR /app
-
-# Install system dependencies (if needed, e.g. for git or build tools)
-# RUN apt-get update && apt-get install -y gcc && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first to leverage Docker cache
 COPY requirements.txt .
